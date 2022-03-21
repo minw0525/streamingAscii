@@ -8,7 +8,7 @@ let videoReady = false;
 let windowW = innerWidth-10;
 let windowH = innerHeight-10;
 let videoW, videoH;
-let pixels = 50;
+let pixels = 100;
 const videoConstraints = {
     audio: false,
     video: {
