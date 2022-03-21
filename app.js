@@ -88,6 +88,7 @@ function init(){
 }
 
 function createCells(){
+    txtFrame.textContent = '';
     for(let i = 0; i < wLen * hLen; i++){
         const pre = document.createElement('pre');
         pre.classList.add('cell')
