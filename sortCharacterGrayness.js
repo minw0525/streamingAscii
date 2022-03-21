@@ -52,7 +52,7 @@ function quickSort(arr){
 
 function pick256Hanguls(){
     curWeight = 100;
-    for (let i = 0; i<3; i++){
+    for (let i = 0; i<5; i++){
         ctxF.font = `${curWeight} ${frameSize}px Noto Sans KR`
 
         for (let i = parseInt('AC00', 16); i <= parseInt('D7A3', 16); i++){
@@ -64,7 +64,7 @@ function pick256Hanguls(){
             }
             globalIdx++
         }
-        curWeight += 400;
+        curWeight += 200;
         console.log(hangulList)
     }
 
