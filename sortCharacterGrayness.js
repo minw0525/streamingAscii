@@ -1,7 +1,7 @@
 /// 가: AC00  힣: D7A3
 const hangulList = [];
 let globalIdx = 0;
-let weight;
+let weights = [100, 300, 500, 700, 900];
 let threshold = 256;
 
 //console.log(hangulList)
@@ -51,20 +51,18 @@ function quickSort(arr){
 
 
 function pick256Hanguls(){
-    curWeight = 100;
-    for (let i = 0; i<5; i++){
-        ctxF.font = `${curWeight} ${frameSize}px Noto Sans KR`
+    for (let i = 0; i<weights.length; i++){
+        ctxF.font = `${weights[i]} ${frameSize}px Noto Sans KR`
 
-        for (let i = parseInt('AC00', 16); i <= parseInt('D7A3', 16); i++){
-            let str = String.fromCharCode(i);
+        for (let j = parseInt('AC00', 16); j <= parseInt('D7A3', 16); j++){
+            let str = String.fromCharCode(j);
             hangulList[globalIdx] = {
                 char: str,
                 grayness : getGrayness(str),
-                weight: curWeight
+                weight: weights[i]
             }
             globalIdx++
         }
-        curWeight += 200;
         console.log(hangulList)
     }
 
